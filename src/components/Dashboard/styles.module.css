@@ -1,6 +1,8 @@
-.header {
-    padding: 2rem;
+.area {
+    height: 100vh;
+    width: 80vw;
+    margin: 4em;
+    background-color: black;
     display: flex;
     justify-content: center;
-    font-size: 3rem;
 }

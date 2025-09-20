@@ -1,10 +1,7 @@
-import '../../styles/global.css';
-import styles from './styles.module.css';
+import styles from './styles.module.css'
 
 export function Dashboard () {
-    return <>
-        <div>
-            <h1 className= {styles.header}>Bloco de notas</h1>
-        </div>
-    </>
+    return <div className = {styles.area}>
+        <p>Esse é um bilhete</p>
+    </div>
 }

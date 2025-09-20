@@ -1,9 +1,9 @@
-import { Dashboard } from './components/Dashboard'
+import { InitialPage } from './components/InitialPage'
 
 function App() {
 
   return (
-    <Dashboard/>
+    <InitialPage/>
   )
 }
 
