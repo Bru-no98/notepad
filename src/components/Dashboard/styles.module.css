@@ -1,8 +1,9 @@
 .area {
     height: 100vh;
-    width: 80vw;
+    max-width: 100vw;
+    width: 90%;
     margin: 4em;
-    background-color: black;
+    background-color: white;
     display: flex;
     justify-content: center;
 }
