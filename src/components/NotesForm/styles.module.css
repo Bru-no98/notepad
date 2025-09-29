@@ -1,0 +1,11 @@
+.area {
+    height: 100vh;
+    max-width: 100vw;
+    width: 90%;
+    margin: 4em;
+    display: flex;
+    align-content: flex-start;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 3em
+}
