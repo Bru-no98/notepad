@@ -1,9 +1,12 @@
 import { InitialPage } from './components/InitialPage'
+import { NotesContextProvider } from './contexts/NotesContext/NotesContextProvider'
 
 function App() {
 
   return (
-    <InitialPage/>
+    <NotesContextProvider>
+      <InitialPage/>
+    </NotesContextProvider>   
   )
 }
 

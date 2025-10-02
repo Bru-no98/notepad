@@ -1,15 +1,8 @@
-import { useState } from 'react'
 import styles from './styles.module.css'
-import type { NotesModel } from '../../Models/NotesModel'
+import { useNotesContext } from '../../contexts/NotesContext/useNotesContext';
 
 export function NotesForm() {
-
-    const [state, setState] = useState<NotesModel>({
-        id: '',
-        title: '',
-        registerDate: Date.now(),
-        content: ''
-    })
+    const {state, setState} = useNotesContext();
 
     function handleSaveNote(e: React.FormEvent<HTMLFormElement>){
         e.preventDefault();
