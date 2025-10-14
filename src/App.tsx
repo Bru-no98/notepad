@@ -1,12 +1,21 @@
-import { InitialPage } from './components/InitialPage'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import { NotesContextProvider } from './contexts/NotesContext/NotesContextProvider'
+import { InitialPage } from './components/InitialPage'
+import { Dashboard } from './components/Dashboard'
+import { NotesForm } from './components/NotesForm'
 
 function App() {
 
   return (
-    <NotesContextProvider>
-      <InitialPage/>
-    </NotesContextProvider>   
+    <BrowserRouter>
+      <NotesContextProvider>
+        <Routes>
+          <Route path="/" element={<InitialPage/>}/>
+          <Route path="/dashboard" element={<Dashboard/>}/>
+          <Route path="/notesform" element={<NotesForm/>}/>
+        </Routes>
+      </NotesContextProvider>
+    </BrowserRouter> 
   )
 }
 

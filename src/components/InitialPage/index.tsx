@@ -1,28 +1,30 @@
-import { useState } from 'react';
+
 import '../../styles/global.css';
-import { NotesForm } from '../NotesForm';
+
 import styles from './styles.module.css';
-import { Dashboard } from '../Dashboard';
+
+import { Link } from 'react-router-dom';
 
 export function InitialPage () {
-    const [state, setState] = useState('Form')
+    // const [state, setState] = useState('Form')
 
-    function handleChangePage(){
-        if (state === 'Form') {
-            setState('Dashboard')
-        }
+    // function handleChangePage(){
+    //     if (state === 'Form') {
+    //         setState('Dashboard')
+    //     }
 
-        if (state === 'Dashboard') {
-            setState('Form')
-        }
-    }
+    //     if (state === 'Dashboard') {
+    //         setState('Form')
+    //     }
+    // }
 
     return <>
         <div className={styles.container}>
             <h1 className= {styles.header}>Bloco de notas</h1>
-            <button onClick={handleChangePage}>Trocar de página</button>
-            {state === 'Form' && <NotesForm/>}
-            {state === 'Dashboard' && <Dashboard/>}
+            <Link to="/dashboard">DashBoard</Link>
+            <Link to="/notesform">Formulário de Notas</Link>
+            {/* {state === 'Form' && <NotesForm/>}
+            {state === 'Dashboard' && <Dashboard/>} */}
         </div>
     </>
 }
