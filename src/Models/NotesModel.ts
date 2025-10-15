@@ -1,6 +1,6 @@
 export type NotesModel = {
     id: string,
-    title: string,
+    title: string | undefined,
     registerDate: number,
-    content: string
+    content: string | undefined
 }

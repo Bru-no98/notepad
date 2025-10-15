@@ -1,10 +1,10 @@
 import { createContext} from "react";
-import type { NotesModel } from "../../Models/NotesModel";
 import { InitialNotesState } from "./InitialNotesState";
+import type { NotesListModel } from "../../Models/NotesListModel";
 
 type NotesContextProps = {
-    state : NotesModel;
-    setState: React.Dispatch<React.SetStateAction<NotesModel>>
+    state : NotesListModel;
+    setState: React.Dispatch<React.SetStateAction<NotesListModel>>
 }
 
 const initialContextValue = {

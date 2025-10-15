@@ -1,8 +1,5 @@
-import type { NotesModel } from "../../Models/NotesModel";
+import type { NotesListModel } from "../../Models/NotesListModel";
 
-export const InitialNotesState: NotesModel = {
-    id: '',
-    title: '',
-    registerDate: Date.now(),
-    content: ''
+export const InitialNotesState: NotesListModel = {
+    notes: []
 }
