@@ -1,9 +1,9 @@
-import { useNotesContext } from '../../contexts/NotesContext/useNotesContext';
 import styles from './styles.module.css'
 
 export function Note() {
-    const {state} = useNotesContext();
-    const notesMap = [...state.notes]
+    const notesSaved = localStorage.getItem('notesStorage')
+    const notesConverted = JSON.parse(notesSaved || '[]')
+    const notesMap = [...notesConverted]
 
     return (
         notesMap.map((note) => {

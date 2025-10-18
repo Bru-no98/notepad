@@ -2,6 +2,7 @@ import styles from './styles.module.css'
 import { useNotesContext } from '../../contexts/NotesContext/useNotesContext';
 import { useRef } from 'react';
 import type { NotesModel } from '../../Models/NotesModel';
+import { Link } from 'react-router-dom';
 
 export function NotesForm() {
     const {state, setState} = useNotesContext();
@@ -24,7 +25,10 @@ export function NotesForm() {
             }
         })
 
-        console.log(state)
+        const noteJson = JSON.stringify(state.notes)
+
+        console.log(noteJson)
+        localStorage.setItem('notesStorage', noteJson)
 
     }
 
@@ -38,6 +42,7 @@ export function NotesForm() {
                 ref={noteInformation}></input>
 
                 <button type='submit'>Registrar Anotação</button>
+                <Link to="/">Página Inicial</Link>
             </form>
         </div>
     </>
