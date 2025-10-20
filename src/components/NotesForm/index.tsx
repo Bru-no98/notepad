@@ -24,8 +24,10 @@ export function NotesForm() {
             notes: [...prevState.notes, newNote]
             }
         })
+        
+        if(!newNote) return;
 
-        const noteJson = JSON.stringify(state.notes)
+        const noteJson = JSON.stringify([...state.notes, newNote])
 
         console.log(noteJson)
         localStorage.setItem('notesStorage', noteJson)
