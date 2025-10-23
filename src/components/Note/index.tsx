@@ -1,6 +1,5 @@
-
 import type { NotesModel } from '../../Models/NotesModel'
-import styles from './styles.module.css'
+
 
 export function Note() {
     const notesSaved = localStorage.getItem('notesStorage')
@@ -8,8 +7,8 @@ export function Note() {
 
     return (
         notesConverted.map((note) => {
-            return <div key={note.id} className = {styles.layout} >
-            <h2>{note.title}</h2>
+            return <div key={note.id} className = "flex flex-col rounded-md size-32" >
+            <h2 className='text-8x1'>{note.title}</h2>
             <p>{note.registerDate}</p>
             <p>{note.content}</p>
         </div>
