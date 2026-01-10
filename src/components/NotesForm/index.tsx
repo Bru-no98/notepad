@@ -37,14 +37,12 @@ export function NotesForm() {
     return <>
         <div>
             <form onSubmit={handleSaveNote} className = {styles.area}>
-                <input
-                ref={noteTitle}></input>
+                <input  className = "border-1 rounded-md border-[#2F4F7C] bg-white" ref={noteTitle}></input>
 
-                <input
-                ref={noteInformation}></input>
+                <input className = "border-1 rounded-md border-[#2F4F7C] bg-white" ref={noteInformation}></input>
 
-                <button type='submit'>Registrar Anotação</button>
-                <Link to="/">Página Inicial</Link>
+                <button type='submit' className='rounded-md bg-sky-500 hover:bg-sky-700'>Registrar Anotação</button>
+                <Link className='rounded-md bg-sky-500 hover:bg-sky-700 text-center' to="/">Página Inicial</Link>
             </form>
         </div>
     </>
