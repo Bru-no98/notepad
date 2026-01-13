@@ -1,8 +1,8 @@
-import styles from './styles.module.css'
 import { useNotesContext } from '../../contexts/NotesContext/useNotesContext';
 import { useRef } from 'react';
 import type { NotesModel } from '../../Models/NotesModel';
 import { Link } from 'react-router-dom';
+import { DefaultButton } from '../DefaultButton/DefaultButton';
 
 export function NotesForm() {
     const {state, setState} = useNotesContext();
@@ -36,13 +36,13 @@ export function NotesForm() {
 
     return <>
         <div>
-            <form onSubmit={handleSaveNote} className = {styles.area}>
-                <input  className = "border-1 rounded-md border-[#2F4F7C] bg-white" ref={noteTitle}></input>
+            <form onSubmit={handleSaveNote} className='flex flex-col gap-2 justify-center items-center w-screen h-screen'>
+                <input  className = "border-1 rounded-md border-[#2F4F7C] bg-white w-48" ref={noteTitle}></input>
 
-                <input className = "border-1 rounded-md border-[#2F4F7C] bg-white" ref={noteInformation}></input>
+                <input className = "border-1 rounded-md border-[#2F4F7C] bg-white w-48" ref={noteInformation}></input>
 
-                <button type='submit' className='rounded-md bg-sky-500 hover:bg-sky-700'>Registrar Anotação</button>
-                <Link className='rounded-md bg-sky-500 hover:bg-sky-700 text-center' to="/">Página Inicial</Link>
+                <button type='submit'><DefaultButton className='w-48'>Registrar Anotação</DefaultButton></button>
+                <Link to="/"><DefaultButton className='w-48'>Página Inicial</DefaultButton></Link>
             </form>
         </div>
     </>
